@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Official Banana GC</title>
+<style>
+body {margin:0;font-family:Arial;background:#0f172a;color:white}
+nav {background:#111827;padding:15px;display:flex;gap:20px}
+nav button {background:none;border:none;color:white;font-size:16px;cursor:pointer}
+.section {display:none;padding:20px}
+.active {display:block}
+.card {background:#1e293b;padding:15px;border-radius:10px;margin-top:10px}
+</style>
+</head>
+<body>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('members')">Members</button>
+  <button onclick="showSection('appeal')">Appeal</button>
+  <button onclick="showSection('hierarchy')">Hierarchy</button>
+</nav>
+
+<div id="home" class="section active">
+  <h1>🍌 The Official Banana GC</h1>
+  <p>Welcome to the official group website.</p>
+</div>
+
+<div id="members" class="section">
+  <h2>Members</h2>
+  <div class="card">Add members here</div>
+</div>
+
+<div id="appeal" class="section">
+  <h2>Appeal</h2>
+  <div class="card">
+    <p>Submit your appeal:</p>
+    <input placeholder="Username" style="width:100%;margin:5px 0;padding:8px">
+    <textarea placeholder="Reason" style="width:100%;margin:5px 0;padding:8px"></textarea>
+    <button onclick="alert('Submitted')">Submit</button>
+  </div>
+</div>
+
+<div id="hierarchy" class="section">
+  <h2>Hierarchy</h2>
+  <div class="card">Owner</div>
+  <div class="card">Admins</div>
+  <div class="card">Members</div>
+</div>
+
+<script>
+function showSection(id){
+ document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
