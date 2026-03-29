@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appeal Ticket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #3b82f6;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Appeal Ticket</h2>
+
+  <form onsubmit="submitForm(event)">
+    <label>Username</label>
+    <input type="text" required>
+
+    <label>Date</label>
+    <input type="date" required>
+
+    <label>Action Type</label>
+    <select required>
+      <option value="">Select</option>
+      <option>Warning</option>
+      <option>Temporary Ban</option>
+      <option>Permanent Ban</option>
+    </select>
+
+    <label>Reason</label>
+    <textarea required></textarea>
+
+    <button type="submit">Submit Appeal</button>
+  </form>
+</div>
+
+<script>
+function submitForm(e) {
+  e.preventDefault();
+  alert("Appeal submitted.");
+}
+</script>
+
+</body>
+</html>
